@@ -14,46 +14,46 @@ app.get("/", (req, res) => {
   const foodData = [
     {
       name: "Boilded Egg",
-      price: 10,
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+      price: 5,
+      text: "Perfectly boiled eggs, simple, nutritious, and deliciously satisfying.",
       image: "/images/egg.png",
       type: "breakfast",
-    },
-    {
+  },
+  {
       name: "RAMEN",
-      price: 25,
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+      price: 15,
+      text: "Flavorful ramen: rich broth, tender noodles, and savory toppings in every bite.",
       image: "/images/ramen.png",
       type: "lunch",
-    },
-    {
+  },
+  {
       name: "GRILLED CHICKEN",
       price: 45,
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+      text: "Grilled chicken: succulent, charred perfection with an irresistible smoky aroma.",
       image: "/images/chicken.png",
       type: "dinner",
-    },
-    {
+  },
+  {
       name: "CAKE",
       price: 18,
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+      text: "Indulgent cake: moist layers, rich frosting, a sweet symphony in every bite",
       image: "/images/cake.png",
       type: "breakfast",
-    },
-    {
+  },
+  {
       name: "BURGER",
       price: 23,
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+      text: "Delicious burger: juicy patty, fresh toppings, pure satisfaction in every bite.",
       image: "/images/burger.png",
       type: "lunch",
-    },
-    {
+  },
+  {
       name: "PANCAKE",
       price: 25,
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+      text: "Fluffy pancake: golden-brown, melt-in-your-mouth goodness, topped with sweet syrup.",
       image: "/images/pancake.png",
       type: "dinner",
-    },
+  },
   ];
 
   res.json(foodData);
