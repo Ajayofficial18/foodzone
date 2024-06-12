@@ -33,7 +33,7 @@ app.get("/", (req, res) => {
             price: 45,
             text: "Grilled chicken: succulent, charred perfection with an irresistible smoky aroma.",
             image: "/images/chicken.png",
-            type: "dinner",
+            type: "dinner ",
         },
         {
             name: "CAKE",

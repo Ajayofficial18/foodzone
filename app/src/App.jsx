@@ -1,8 +1,10 @@
 import styled from "styled-components";
 import {useEffect, useState } from "react";
 import FoodSearch from "./Components/FoodSearch";
+import styles from "./App.module.css";
 
-export const BASE_URL = "http://localhost:9000";
+export const BASE_URL = "https://foodzone-8c9r.onrender.com";
+// export const BASE_URL = "http://localhost:9000";
 
 const App = () => {
   const [data, setData] = useState(null);
@@ -96,7 +98,11 @@ const App = () => {
     <FilterContainer>
     {filterBtns.map((value) => (
             <Button
-              isSelected={selectedBtn === value.type}
+              style={{
+                background: selectedBtn === value.type ? "#f22f2f" : "#ff4343",
+                outline: selectedBtn === value.type ? "white" : "#ff4343",
+              }}
+              // isSelected={selectedBtn === value.type}
               key={value.name}
               onClick={() => filterFood(value.type)}
             >
@@ -105,7 +111,9 @@ const App = () => {
           ))}
     </FilterContainer>
   </Container>
+  
   <FoodSearch data={filteredData}/>
+  
   </>
   );
 };
@@ -147,15 +155,19 @@ justify-content:center;
 gap:12px;
 padding-bottom:20px;
 `;
-export const Button = styled.button`
-background: ${({ isSelected }) => (isSelected ? "#f22f2f" : "#ff4343")};
-outline: 1px solid ${({ isSelected }) => (isSelected ? "white" : "#ff4343")};
-border-radius:5px;
-padding:6px 12px;
-border:none;
-color:white;
-cursor: pointer;
-&:hover {
-    background-color: #f22f2f;
-  }
-`;
+// export const Button = styled.button`
+// background: ${({ isSelected }) => (isSelected ? "#f22f2f" : "#ff4343")};
+// outline: 1px solid ${({ isSelected }) => (isSelected ? "white" : "#ff4343")};
+// border-radius:5px;
+// padding:6px 12px;
+// border:none;
+// color:white;
+// cursor: pointer;
+// &:hover {
+//     background-color: #f22f2f;
+//   }
+// `;
+
+export const Button = (props) => {
+  return <button {...props} className={styles.buttonClass}>{props.children}</button>
+}
