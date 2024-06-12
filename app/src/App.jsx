@@ -3,7 +3,8 @@ import {useEffect, useState } from "react";
 import FoodSearch from "./Components/FoodSearch";
 import styles from "./App.module.css";
 
-export const BASE_URL = "https://foodzone-8c9r.onrender.com";
+// export const BASE_URL = "https://foodzone-8c9r.onrender.com";
+export const BASE_URL = "https://foodzone-y4td.onrender.com";
 // export const BASE_URL = "http://localhost:9000";
 
 const App = () => {
